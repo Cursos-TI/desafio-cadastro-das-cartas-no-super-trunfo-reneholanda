@@ -37,7 +37,7 @@ int main() {
 
     printf("Carta 2\n");
     printf("Estado: ");
-    scanf("%c", &estado_carta2);
+    scanf(" %c", &estado_carta2);
     printf("Código da carta: ");
     scanf("%s", codigo_cidade2);
     printf("Nome da cidade: ");
