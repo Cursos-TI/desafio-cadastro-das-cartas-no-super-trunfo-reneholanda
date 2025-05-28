@@ -15,7 +15,45 @@ int main() {
     float area_cidade1, area_cidade2;
     float pib_cidade1, pib_cidade2;
     int pontoturistico_cid1, pontoturistico_cid2;
+
     // Cadastro das Cartas:
+    printf("Insira os dados das cartas\n");
+
+    printf("Carta 1\n");
+    printf("Estado: ");
+    scanf("%c", &estado_carta1);
+    printf("Código da carta: ");
+    scanf("%s", codigo_cidade1);
+    printf("Nome da cidade: ");
+    scanf("%s", nome_cidade1);
+    printf("População: ");
+    scanf("%i", &populacao_cidade1);
+    printf("Área: ");
+    scanf("%f", &area_cidade1);
+    printf("PIB: ");
+    scanf("%f", &pib_cidade1);
+    printf("Número de Pontos Turísticos: ");
+    scanf("%i", &pontoturistico_cid1);
+
+    printf("Carta 2\n");
+    printf("Estado: ");
+    scanf("%c", &estado_carta2);
+    printf("Código da carta: ");
+    scanf("%s", codigo_cidade2);
+    printf("Nome da cidade: ");
+    scanf("%s", nome_cidade2);
+    printf("População: ");
+    scanf("%i", &populacao_cidade2);
+    printf("Área: ");
+    scanf("%f", &area_cidade2);
+    printf("PIB: ");
+    scanf("%f", &pib_cidade2);
+    printf("Número de Pontos Turísticos: ");
+    scanf("%i", &pontoturistico_cid2);
+
+
+    
+
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     
