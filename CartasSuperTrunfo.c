@@ -17,6 +17,9 @@ int main() {
     float area_cidade1, area_cidade2;
     float pib_cidade1, pib_cidade2;
     int pontoturistico_cid1, pontoturistico_cid2;
+    float densidade_populacional;
+    float pib_per_capta;
+
 
     // Cadastro das Cartas:
 
@@ -63,12 +66,29 @@ int main() {
     printf(" Nome da Cidade: %s\n População: %i\n", nome_cidade1, populacao_cidade1);
     printf(" Área: %.2f km²\n PIB: %.2f bilhões de reais\n Numeros de Pontos Turísticos: %i\n", area_cidade1, pib_cidade1, pontoturistico_cid1);
 
+    // Calculando Densidade Populacional e PIB per Capita
+    densidade_populacional = populacao_cidade1 / area_cidade1;
+    pib_per_capta = (float) populacao_cidade1 / pib_cidade1;
+
+    // Exibindo os resultados de Densidade Populacional e PIB per Capita
+    printf(" Densidade Populacional: %.2f hab/km²\n", densidade_populacional);
+    printf(" PIB per Capita: %.2f reais\n", pib_per_capta);
+
     printf("\n");
 
     //Exibição dos Dados da Carta 2
     printf("Carta 2\n Estado: %c\n Código: %s\n", estado_carta2, codigo_cidade2);
     printf(" Nome da Cidade: %s\n População: %i\n", nome_cidade2, populacao_cidade2);
     printf(" Área: %.2f km²\n PIB: %.2f bilhões de reais\n Numeros de Pontos Turísticos: %i\n", area_cidade2, pib_cidade2, pontoturistico_cid2);
+
+    // Calculando Densidade Populacional e PIB per Capita
+    densidade_populacional = populacao_cidade2 / area_cidade2;
+    pib_per_capta = (float) populacao_cidade2 / pib_cidade2;
+
+    // Exibindo os resultados de Densidade Populacional e PIB per Capita
+    printf(" Densidade Populacional: %.2f hab/km²\n", densidade_populacional);
+    printf(" PIB per Capita: %.2f reais\n", pib_per_capta);
+
 
     return 0;
 }
