@@ -120,7 +120,19 @@ int main() {
     printf(" Densidade Populacional:%i\n", resultadoE);
     printf(" PIB per Capita:%i\n", resultadoF);
     printf(" Super Poder:%i\n", resultadoG);
-    
+
+    printf("\n");
+
+    //Comparando atributos das cartas usando estruturas de decisão
+    printf(" Comparação de cartas (Atributo: População):\n");
+    printf(" Carta 1 - %s (SP): %lu\n", nome_cidade1, populacao_cidade1);
+    printf(" Carta 2 - %s (RJ): %lu\n", nome_cidade2, populacao_cidade2);
+
+    if(populacao_cidade1 > populacao_cidade2){
+        printf(" Resultado: Carta 1 venceu!\n");
+    } else {
+        printf(" Resultado: Carta 2 venceu!\n");
+    }
     
     return 0;
 }
