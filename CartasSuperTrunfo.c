@@ -179,9 +179,55 @@ int main() {
         } else if (area_cidade1 == area_cidade2){
             printf("Empate!\n");
         }
-            
-    
+
+        break;
+    case 3:
+        printf("Resultado:\n");
+        printf("%s e %s \n", nome_cidade1, nome_cidade2);
+        printf("Atributo usado: PIB\n");
+        printf("PIB carta 1 (%s): %.2f Bilhões de Reais - PIB carta 2 (%s): %.2f Bilhões de Reais\n", nome_cidade1, pib_cidade1, nome_cidade2, pib_cidade2);
+        if (pib_cidade1 > pib_cidade2)
+        {
+            printf("Carta 1 venceu!!\n");
+        } else if(pib_cidade2 > pib_cidade1){
+            printf("Carta 2 venceu!\n");
+        } else if (pib_cidade1 == pib_cidade2){
+            printf("Empate!\n");
+        }
+
+        break;
+    case 4:
+        printf("Resultado:\n");
+        printf("%s e %s \n", nome_cidade1, nome_cidade2);
+        printf("Atributo usado: Número de Pontos turísticos\n");
+        printf("Número de Pontos Turísticos carta 1 (%s): %i - Número de Pontos Turísticos carta 2 (%s): %.i\n", nome_cidade1, pontoturistico_cid1, nome_cidade2, pontoturistico_cid2);
+        if (pontoturistico_cid1 > pontoturistico_cid2)
+        {
+            printf("Carta 1 venceu!!\n");
+        } else if(pontoturistico_cid2 > pontoturistico_cid1){
+            printf("Carta 2 venceu!\n");
+        } else if (pontoturistico_cid1 == pontoturistico_cid2){
+            printf("Empate!\n");
+        }
+        
+        break;
+    case 5:
+        printf("Resultado:\n");
+        printf("%s e %s \n", nome_cidade1, nome_cidade2);
+        printf("Atributo usado: Densidade demográfica\n");
+        printf("Densidade demográfica carta 1 (%s): %.2f hab/km² - Densidade demográfica carta 2 (%s): %.2f hab/km²\n", nome_cidade1, densidade_populacional1, nome_cidade2, densidade_populacional2);
+        if ( densidade_populacional1 < densidade_populacional2)
+        {
+            printf("Carta 1 venceu!!\n");
+        } else if(densidade_populacional2 < densidade_populacional1){
+            printf("Carta 2 venceu!\n");
+        } else if (densidade_populacional1 == densidade_populacional2){
+            printf("Empate!\n");
+        } 
+        
+        break;
     default:
+        printf("Número inválido!!");
         break;
     }
 
