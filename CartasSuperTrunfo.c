@@ -19,6 +19,7 @@ int main() {
     float densidade_populacional1, densidade_populacional2;
     float pib_per_capta1, pib_per_capta2;
     float super_poder1, super_poder2;
+    int menu;
 
 
     // Cadastro das Cartas:
@@ -125,14 +126,65 @@ int main() {
 
     //Comparando atributos das cartas usando estruturas de decisão
     printf(" Comparação de cartas (Atributo: População):\n");
-    printf(" Carta 1 - %s (SP): %lu\n", nome_cidade1, populacao_cidade1);
-    printf(" Carta 2 - %s (RJ): %lu\n", nome_cidade2, populacao_cidade2);
+    printf(" Carta 1 - %s : %lu\n", nome_cidade1, populacao_cidade1);
+    printf(" Carta 2 - %s : %lu\n", nome_cidade2, populacao_cidade2);
 
     if(populacao_cidade1 > populacao_cidade2){
         printf(" Resultado: Carta 1 venceu!\n");
     } else {
         printf(" Resultado: Carta 2 venceu!\n");
     }
+
+    // Menu interativo para escolha e comparação dos atributos 
+
+    printf("\n");
+
+    printf("### Comparação de cartas ###\n");
+    printf("Opções:\n");
+    printf("1. População\n");
+    printf("2. Área\n");
+    printf("3. PIB\n");
+    printf("4. Número de pontos turísticos\n");
+    printf("5. Densidade demográfica\n");
+    printf("Escolha um atributo: ");
+    scanf("%d", &menu);
+
+    switch (menu)
+    {
+    case 1:
+        printf("Resultado:\n");
+        printf("%s e %s \n", nome_cidade1, nome_cidade2);
+        printf("Atributo usado: População\n");
+        printf("População carta 1 (%s): %lu - População carta 2 (%s): %lu\n", nome_cidade1, populacao_cidade1, nome_cidade2, populacao_cidade2);
+        if (populacao_cidade1 > populacao_cidade2)
+        {
+            printf("Carta 1 venceu!!\n");
+        } else if(populacao_cidade2 > populacao_cidade1){
+            printf("Carta 2 venceu!\n");
+        } else if (populacao_cidade1 == populacao_cidade2){
+            printf("Empate!\n");
+        }
+        
+        break;
+    case 2:
+        printf("Resultado:\n");
+        printf("%s e %s \n", nome_cidade1, nome_cidade2);
+        printf("Atributo usado: Área\n");
+        printf("Área carta 1 (%s): %.2f km² - Área carta 2 (%s): %.2f km²\n", nome_cidade1, area_cidade1, nome_cidade2, area_cidade2);
+        if (area_cidade1 > area_cidade2)
+        {
+            printf("Carta 1 venceu!!\n");
+        } else if(area_cidade2 > area_cidade1){
+            printf("Carta 2 venceu!\n");
+        } else if (area_cidade1 == area_cidade2){
+            printf("Empate!\n");
+        }
+            
+    
+    default:
+        break;
+    }
+
     
     return 0;
 }
